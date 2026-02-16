@@ -11,7 +11,9 @@ import { Brand } from "@/interfaces/BrandInterface";
 export default async function BrandDetails({ params }: { params: Params }) {
   const { brandId } = await params;
 
-  const response = await fetch(`${process.env.API_URL}/brands/${brandId}`);
+  const response = await fetch(
+    `https://ecommerce.routemisr.com/api/v1/brands/${brandId}`,
+  );
 
   const { data: brand }: { data: Brand } = await response.json();
   console.log("🇹🇦 brand:", brand);

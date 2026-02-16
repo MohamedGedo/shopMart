@@ -6,10 +6,10 @@ export default function Login() {
       <h2>Login</h2>
       <LoginForm />
       <p>
-        If you donot have account, please{" "}
+        If you donot have account, please
         <a className="text-blue-600 underline" href="/register">
           SignUp
-        </a>{" "}
+        </a>
         Now
       </p>
     </div>
