@@ -17,7 +17,7 @@ export default async function ProductDetails({ params }: { params: Params }) {
   const { productId } = await params;
 
   const response = await fetch(
-    `https://ecommerce.routemisr.com/api/v1/products/` + productId,
+    `https://ecommerce.routemisr.com/api/v1/products/${productId}`,
   );
 
   const { data: product }: { data: Product } = await response.json();
