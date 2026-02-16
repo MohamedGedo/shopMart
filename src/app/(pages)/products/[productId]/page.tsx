@@ -16,7 +16,9 @@ import { Params } from "next/dist/server/request/params";
 export default async function ProductDetails({ params }: { params: Params }) {
   const { productId } = await params;
 
-  const response = await fetch(`${process.env.API_URL}/products/` + productId);
+  const response = await fetch(
+    `https://ecommerce.routemisr.com/api/v1/products/` + productId,
+  );
 
   const { data: product }: { data: Product } = await response.json();
 
