@@ -12,7 +12,7 @@ export default async function CategoryDetails({ params }: { params: Params }) {
   const { categoryId } = await params;
 
   const response = await fetch(
-    `${process.env.API_URL}/categories/` + categoryId,
+    `${process.env.API_URL}/categories/${categoryId}`,
   );
 
   const { data: category }: { data: Category } = await response.json();
